@@ -1,0 +1,11 @@
+-- Static SQL seed has been intentionally removed.
+-- Use scripts/bootstrap-real-league.mjs after applying supabase/schema.sql.
+--
+-- Why:
+-- Profiles must use the real Supabase auth user IDs, so a plain SQL seed file
+-- cannot safely create the league members and preserve login access.
+--
+-- Run:
+--   1. Apply supabase/schema.sql in the Supabase SQL editor
+--   2. From the project root run:
+--        node scripts/bootstrap-real-league.mjs
