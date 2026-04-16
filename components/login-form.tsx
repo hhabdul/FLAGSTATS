@@ -45,7 +45,7 @@ export function LoginForm() {
     <form className="mt-5 space-y-4" onSubmit={handleSubmit}>
       {error ? <InlineMessage title="Login failed" body={error} tone="warning" /> : null}
       <Field label="Username" htmlFor="username" required hint="Use the username assigned to your league account.">
-        <Input id="username" autoComplete="username" value={username} onChange={(event) => setUsername(event.target.value)} placeholder="hussein" />
+        <Input id="username" autoComplete="username" value={username} onChange={(event) => setUsername(event.target.value.toLowerCase())} placeholder="hussein" />
       </Field>
       <Field label="Password" htmlFor="password" required hint="Passwords are case-sensitive.">
         <Input id="password" autoComplete="current-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" />

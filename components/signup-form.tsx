@@ -80,7 +80,7 @@ export function SignupForm() {
         <Input id="display-name" autoComplete="nickname" value={displayName} onChange={(event) => setDisplayName(event.target.value)} placeholder="Hussein Abdullah" />
       </Field>
       <Field label="Username" htmlFor="username" required hint="Usernames are unique and become your login.">
-        <Input id="username" autoComplete="username" value={username} onChange={(event) => setUsername(event.target.value)} placeholder="hussein" />
+        <Input id="username" autoComplete="username" value={username} onChange={(event) => setUsername(event.target.value.toLowerCase())} placeholder="hussein" />
       </Field>
       <Field label="Password" htmlFor="password" required hint="At least 8 characters is recommended.">
         <Input id="password" autoComplete="new-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" />
